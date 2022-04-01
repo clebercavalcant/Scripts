@@ -10,7 +10,7 @@ echo "Seria o cluster $cluster, com o service name $service, e task de endereço
 read confirm
 
 if [ $confirm = y ]; then
-echo "Procura sendo efetuada, o processo pode demorar por volta de 5 minutos para escanear 100 tasks!"
+echo "Procura sendo efetuada, o processo pode demorar por volta de 3 minutos para escanear 100 tasks!"
 aws ecs list-tasks --cluster $cluster --service-name $service | grep arn | cut -c 10-95 > ecs_arn_result.txt
 
 while IFS= read -r linha; do
@@ -32,7 +32,7 @@ echo "Saindo... Se digitou errado tente novamente!"
 exit
 fi
 
-echo "A task com o IP $privateIpv4Addres encontrada possui a arn $ARN"
+echo "A task com o IP $privateIpv4Addres encontrada possui a arn? $ARN"
 echo "Deseja executar o comando de stop na mesma? Se sim digite \(y\), se não digite \(n\)."
 read confirm2
 if [ $confirm2 = y ]; then
