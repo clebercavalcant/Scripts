@@ -1,0 +1,12 @@
+
+#listar todas as tasks, filtrar o que preciso e colocar em um arquivo
+#aws ecs list-tasks --cluster prd-ecare-net | grep arn* | cut -c 10-95 > tasks.txt
+
+#descrever os serviços
+#aws ecs describe-services --cluster prd-ecare-net --service prd-ecare-net-client-order-service 
+
+#descrever as tasks
+#aws ecs describe-tasks --cluster prd-ecare-net --tasks arn:aws:ecs:us-east-1:448413641929:task/prd-ecare-net/0884918dbfcb4bb69ecf05f6fc00cb54
+
+#stop na task selecionada
+#aws ecs stop-task --task 666fdccc2e2d4b6894dd422f4eeee8f8
