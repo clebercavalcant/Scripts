@@ -32,7 +32,7 @@ echo "Saindo... Se digitou errado tente novamente!"
 exit
 fi
 
-echo "A task com o IP $privateIpv4Addres encontrada possui a arn? $ARN"
+echo "A task com o IP $privateIpv4Addres encontrada possui a arn? $ARN. Confira as informações!"
 echo "Deseja executar o comando de stop na mesma? Se sim digite \(y\), se não digite \(n\)."
 read confirm2
 if [ $confirm2 = y ]; then
