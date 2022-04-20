@@ -1,22 +1,22 @@
 #!/bin/bash
 clear
 echo "
-*****************************************
-*					*
-*	Selecione uma opção:            *
-*					*
-*	1 - Configurar acesso a AWS	*
-*	2 - Trabalhar com o S3		*
-*	3 - Trabalhar com o EC2		*
-*	4 - Trabalhar com o ECS		*
-*	5 - Trabalhar com o Route53	*
-*	6 - A definir (crie algo!)	*
-*	7 - A definir (crie algo!)	*
-*	8 - A definir (crie algo!)	*
-*	9 - A definir (crie algo!)	*
-*	0 - Sair			*
-*					*
-*****************************************
+**********************************************
+*					     *
+*	Selecione uma opção:                 *
+*					     *
+*	1 - Configurar acesso a AWS	     *
+*	2 - Alterar destaques esportivos NOW *
+*	3 - Trabalhar com o EC2		     *
+*	4 - Trabalhar com o ECS		     *
+*	5 - Trabalhar com o Route53	     *
+*	6 - A definir (crie algo!)	     *
+*	7 - A definir (crie algo!)	     *
+*	8 - A definir (crie algo!)	     *
+*	9 - A definir (crie algo!)	     *
+*	0 - Sair			     *
+*					     *
+**********************************************   
 "
 read opcao
 
@@ -26,7 +26,7 @@ case $opcao in
 	aws sts get-caller-identity > IAM_identity
 	;;
 2)
-	echo "Crie algo!"
+	./destaques_esportivos_now.sh
 	;;
 3)	
 	echo "Crie algo!"	
