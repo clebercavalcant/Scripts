@@ -41,6 +41,10 @@ read repetir
 done
 cp credentials ~/.aws/
 cp config ~/.aws/
+echo "Agora suas credenciais já estão configuradas. Favor, selecionar o próximo serviço na tela seguinte"
+sleep 4
+cd /home/ScriptAWS
+./AWS_CLI.sh
 else
 echo "ATENÇÂO ==> Os perfis específicos precisam de --profile "perfil" sem as aspas depois do comando a ser usado."
 fi
