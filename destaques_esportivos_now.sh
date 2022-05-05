@@ -43,13 +43,12 @@ if [ $decisao = "y" ]; then
 	echo "Digite o id do filme que irá ser apresentado no Autoplay:" 
 	read id7
 	
-	jq '.banners.live.home = ['$id1', '$id2', '$id3', '$id4', '$id5', '$id6']' settings_bkp.json > settings.json
-
-else
-
 	jq '.banners.live.home = ['$id1', '$id2', '$id3', '$id4', '$id5', '$id6']' settings_bkp.json > settings_bkp1.json
 	jq '.banners.vodTrailer = ['$id7']' settings_bkp1.json  > settings.json
 
+else
+	
+	jq '.banners.live.home = ['$id1', '$id2', '$id3', '$id4', '$id5', '$id6']' settings_bkp.json > settings.json
 fi
 
 echo "Realizando upload do arquivo settings.json!"
